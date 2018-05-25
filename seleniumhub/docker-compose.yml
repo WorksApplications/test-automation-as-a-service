@@ -1,0 +1,63 @@
+version: '3.0'
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      # this sub network is important
+      - subnet: 192.168.44.0/24
+
+services:
+  hub:
+    restart: always
+    image: selenium/hub:3.4.0
+    ports:
+      - 4444:4444
+    
+  #====================
+  # change something
+  # Add a chrome node for display purpose, we use dynamic nodes now
+  #
+  #====================
+  
+  chrome-01:
+    restart: always
+    image: "registry.docker.workslan/taas/chrome"
+    build: ./chrome-node
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+    depends_on:
+      - hub
+    volumes:
+      - /dev/shm:/dev/shm # share memory
+      - ${HOME}/taas-data/files/taas:/taas # upload files to that folder
+    networks:
+      default:
+        ipv4_address: 192.168.44.66
+    ports:
+      - "25901:25900" # readonly vnc port
+      - "6001:5555" # selenium port, /wd/hub
+
+  #====================
+  #
+  # Add a firefox node for display purpose, we use dynamic nodes now
+  #
+  #====================
+  firefox-01:
+    restart: always
+    image: "registry.docker.workslan/taas/firefox"
+    build: ./firefox-node
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+    depends_on:
+      - hub
+    volumes:
+      - /dev/shm:/dev/shm # share memory
+      - ${HOME}/taas-data/files/taas:/taas # upload files to that folder
+    ports:
+      - "26901:25900" # readonly vnc port
+      - "7001:5555" # selenium port, /wd/hub

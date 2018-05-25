@@ -1,0 +1,73 @@
+version: '3.0'
+services:
+  api:
+    container_name: "taas-apitest-webservice"
+    depends_on:
+      - mongodb
+    volumes:
+      - ${WORKSPACE}/reports:/reports # report
+      - ${HOME}/taas-data/.m2/repository:/root/.m2/repository # maven dependencies
+
+  mongodb:
+    container_name: "taas-apitest-mongodb"
+    volumes:
+      - ${HOME}/taas-data/db-test:/data/db # data
+    ports:
+      - "27018:27017"
+
+  hub:
+    image: selenium/hub:3.4.0
+    container_name: "taas-apitest-hub"
+
+  chrome-01:
+    image: "registry.docker.workslan/taas/chrome"
+    container_name: "taas-apitest-chrome-01"
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+    depends_on:
+      - hub
+  chrome-01-live:
+    image: "registry.docker.workslan/taas/live"
+    container_name: "taas-apitest-chrome-01-live"
+    depends_on:
+      - chrome-01
+    command: /opt/noVNC/utils/launch.sh --listen 6080 --vnc chrome-01:25900
+
+  chrome-02:
+    image: "registry.docker.workslan/taas/chrome"
+    container_name: "taas-apitest-chrome-02"
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+    depends_on:
+      - hub
+  chrome-02-live:
+    image: "registry.docker.workslan/taas/live"
+    container_name: "taas-apitest-chrome-02-live"
+    depends_on:
+      - chrome-02
+    command: /opt/noVNC/utils/launch.sh --listen 6080 --vnc chrome-02:25900
+
+  chrome-03:
+    image: "registry.docker.workslan/taas/chrome"
+    container_name: "taas-apitest-chrome-03"
+    environment:
+      HUB_PORT_4444_TCP_ADDR: hub
+      HUB_PORT_4444_TCP_PORT: 4444
+    depends_on:
+      - hub
+  chrome-03-live:
+    image: "registry.docker.workslan/taas/live"
+    container_name: "taas-apitest-chrome-03-live"
+    depends_on:
+      - chrome-03
+    command: /opt/noVNC/utils/launch.sh --listen 6080 --vnc chrome-03:25900
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 192.168.66.0/24

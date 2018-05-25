@@ -1,0 +1,88 @@
+server:
+  host: 0.0.0.0
+  port: 5008
+  path: 'http://domain.name/api'
+  report: 'http://domain.name/reports'
+
+database:
+  host: 'localhost'
+  port:
+  dbname: 'taas'
+  username:
+  password:
+
+docker:
+  host: '172.26.142.174'
+  port: 2375
+  apiVersion: 'v1.26'
+  network: 'dynamic-node-net'
+
+core:
+  repo: 'git@scm.hue.workslan:tools/hue-auto-tests.git'
+  workspace: '/path/to/working/directory/'
+  hostWorkspace: '/path/to/hosts/working/directory/'
+  reportDir: '/path/to/reports/directory/'
+  videoDir: '/path/to/videos/directory/'
+  m2Dir: '/path/to/.m2/repository'
+  browser: 'chrome'
+  testUser: 'hue-root'
+  testPassword: 'hue-r00t'
+  profile: 'run-test'
+  ignoreFailure: false
+  mavenOptions: '-B'
+
+#
+# Winston Logging System
+# Reference: https://github.com/winstonjs/winston/blob/master/docs/transports.md
+#
+logger:
+  fileLogger:
+    level: 'debug'
+    filename: '/var/log/taas/logs.log'
+    handleExceptions: true
+    json: false
+    maxsize: 5242880
+    colorize: false
+    maxFiles: 200
+    tailable: true
+  accessLogger:
+    level: 'debug'
+    filename: '../logs/api/access.log'
+    handleExceptions: true
+    json: false
+    maxsize: 5242880
+    colorize: false
+    maxFiles: 200
+    tailable: true
+  consoleLogger:
+    level: 'debug'
+    timestamp: true
+    handleExceptions: true
+    json: false
+    colorize: true
+  morganFormat: ':method :url :status HTTP/:http-version :response-time ms ":referrer" ":user-agent"'
+
+slackbot:
+  token: 'xoxp-your-slack-api-token-here'
+  name: 'Testing Cat'
+  footerIcon: 'http://www.worksap.co.jp/hue/images/contact_logo.png'
+  avatar: 'https://pbs.twimg.com/profile_images/543118466/Garfield3_normal.jpg'
+  enabledStatus:
+   - failed
+   - broken
+   - pending
+   - canceled
+
+ftp:
+  host: 172.26.142.37
+  port: 21
+  user: your_username
+  password: your_password
+  publicUrl: http://taas-develop.internal.worksap.com:8080/
+
+auth:
+  dummy_user:
+    username: 'taas_dummy'
+    email: 'taas_dummy@worksap.co.jp'
+    source: 'dummy'
+    employee_id: 0001

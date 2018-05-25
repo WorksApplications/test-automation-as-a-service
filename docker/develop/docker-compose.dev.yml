@@ -1,0 +1,37 @@
+version: '3.0'
+services:
+  api:
+    ports:
+      - "5008:5008"
+      - "44444-44464:44444-44464"
+    volumes:
+      - ${HOME}/taas-data:/home/taas-data # data
+      - ${HOME}/taas-log:/var/log/taas # log
+      - ${HOME}/taas-data/.m2/repository:/root/.m2/repository # maven dependencies
+    dns: # specify dns explicitly to work around UXDOMAIN error in development environment
+      - 172.26.131.242
+      - 172.26.131.1
+      - 8.8.8.8
+
+  mongodb:
+    ports:
+      - "27017:27017"
+    volumes:
+      - ${HOME}/taas-data/db:/data/db # data
+
+  nginx:
+    volumes:
+      - ${HOME}/taas-data/reports:/home/taas-data/reports # reports
+      - ${HOME}/taas-data/files/apk:/home/taas-data/files/apk # apks
+      - ${HOME}/taas-data/files/attachment:/home/taas-data/files/attachment # attachments
+      - ${HOME}/taas-log:/var/log/taas # log
+    ports:
+      - "8082:80"
+      
+  file-manager:
+    volumes:
+      - ${HOME}/taas-data/files:/srv # static files
+    ports:
+      - "5000:80"
+    command: --no-auth --port 80 --scope /srv
+

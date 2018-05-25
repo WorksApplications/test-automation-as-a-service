@@ -1,0 +1,27 @@
+version: '3.0'
+services:
+  api:
+    image: "${API_IMAGE_TAG}:${IMAGE_TAG}"
+    build: ./webservice
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: "mongo:3.4.3"
+
+  nginx:
+    image: "${NGINX_IMAGE_TAG}:${IMAGE_TAG}"
+    build: ./nginx
+    depends_on:
+      - api
+
+  file-manager:
+    image: "hacdias/filemanager"
+    
+networks:
+  default:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 192.168.123.0/24

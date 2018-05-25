@@ -1,0 +1,500 @@
+{
+  "time" : {
+    "start" : 1493686836444,
+    "stop" : 1493690993769,
+    "duration" : 4157325
+  },
+  "testSuites" : [ {
+    "uid" : "f36d1228e2205ee8",
+    "name" : "HueCollaboration : HueScheduler",
+    "title" : "HueCollaboration : HueScheduler",
+    "time" : {
+      "start" : 1493686836444,
+      "stop" : 1493690993769,
+      "duration" : 4157325
+    },
+    "statistic" : {
+      "total" : 43,
+      "passed" : 21,
+      "pending" : 0,
+      "canceled" : 7,
+      "failed" : 0,
+      "broken" : 15
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "e3ecd4cbc4650e97",
+      "name" : "createFacilityManagement",
+      "title" : "Create facility management",
+      "time" : {
+        "start" : 1493686836444,
+        "stop" : 1493687116195,
+        "duration" : 279751
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "dd56b1f29c6e97d8",
+      "name" : "clickTodayButton",
+      "title" : "Click today button",
+      "time" : {
+        "start" : 1493687116200,
+        "stop" : 1493687393462,
+        "duration" : 277262
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "470c92d05cd21dd9",
+      "name" : "deleteEventForIkezoeSan",
+      "title" : "Delete event for ikezoe san",
+      "time" : {
+        "start" : 1493687393463,
+        "stop" : 1493687670638,
+        "duration" : 277175
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "8bd9d174fd259565",
+      "name" : "displayMyCalendar",
+      "title" : "Display my calendar",
+      "time" : {
+        "start" : 1493687670639,
+        "stop" : 1493687947793,
+        "duration" : 277154
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "474931a7b05c37e5",
+      "name" : "displayNextMonthView",
+      "title" : "Display next month view",
+      "time" : {
+        "start" : 1493687947794,
+        "stop" : 1493688224959,
+        "duration" : 277165
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "3d38d84c9083f336",
+      "name" : "displayPreviousMonthView",
+      "title" : "Display previous month view",
+      "time" : {
+        "start" : 1493688224960,
+        "stop" : 1493688502085,
+        "duration" : 277125
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "6d039ab997e2e7a0",
+      "name" : "getCreatePage",
+      "title" : "Get create page",
+      "time" : {
+        "start" : 1493688502086,
+        "stop" : 1493688779272,
+        "duration" : 277186
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "bb8ce961010245c7",
+      "name" : "login",
+      "title" : "Login",
+      "time" : {
+        "start" : 1493688779273,
+        "stop" : 1493689056289,
+        "duration" : 277016
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "d5893165559e5a8b",
+      "name" : "removeCalendar",
+      "title" : "Remove calendar",
+      "time" : {
+        "start" : 1493689056290,
+        "stop" : 1493689333434,
+        "duration" : 277144
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "73973cfb1e887218",
+      "name" : "selectCalendar",
+      "title" : "Select calendar",
+      "time" : {
+        "start" : 1493689333435,
+        "stop" : 1493689610613,
+        "duration" : 277178
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "dd039f42b14ce118",
+      "name" : "selectColorOfMyCalendar",
+      "title" : "Select color of my calendar",
+      "time" : {
+        "start" : 1493689610614,
+        "stop" : 1493689946434,
+        "duration" : 335820
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "eb41b576fbded067",
+      "name" : "selectColorOfOtherCalendar",
+      "title" : "Select color of other calendar",
+      "time" : {
+        "start" : 1493689946435,
+        "stop" : 1493690129864,
+        "duration" : 183429
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "1ea55d4658c4e264",
+      "name" : "selectHueScheduler",
+      "title" : "Select hue scheduler",
+      "time" : {
+        "start" : 1493690129865,
+        "stop" : 1493690146956,
+        "duration" : 17091
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "f2d446d05ef17087",
+      "name" : "selectViews",
+      "title" : "Select views",
+      "time" : {
+        "start" : 1493690146959,
+        "stop" : 1493690163386,
+        "duration" : 16427
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "156e7962c9c5f51a",
+      "name" : "undisplayMyCalendar",
+      "title" : "Undisplay my calendar",
+      "time" : {
+        "start" : 1493690163388,
+        "stop" : 1493690218985,
+        "duration" : 55597
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "ddd8708188f78b0a",
+      "name" : "clickTodayButtonInEndCalendar",
+      "title" : "Click today button in end calendar",
+      "time" : {
+        "start" : 1493690218989,
+        "stop" : 1493690234903,
+        "duration" : 15914
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "cbda68f5b793e03b",
+      "name" : "confirmDefaultEndTime",
+      "title" : "Confirm default end time",
+      "time" : {
+        "start" : 1493690234904,
+        "stop" : 1493690271338,
+        "duration" : 36434
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "a646168f893325e5",
+      "name" : "confirmDefaultReminder",
+      "title" : "Confirm default reminder",
+      "time" : {
+        "start" : 1493690271339,
+        "stop" : 1493690278612,
+        "duration" : 7273
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "ea9805de357f5094",
+      "name" : "confirmDefaultStartTime",
+      "title" : "Confirm default start time",
+      "time" : {
+        "start" : 1493690278613,
+        "stop" : 1493690315260,
+        "duration" : 36647
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "8c081a5ed7388a14",
+      "name" : "confirmLinkedTime",
+      "title" : "Confirm linked time",
+      "time" : {
+        "start" : 1493690315261,
+        "stop" : 1493690326484,
+        "duration" : 11223
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "151b8008f9207c94",
+      "name" : "createEventForIkezoeSan",
+      "title" : "Create event for ikezoe san",
+      "time" : {
+        "start" : 1493690326485,
+        "stop" : 1493690405463,
+        "duration" : 78978
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "edcf40217844697e",
+      "name" : "deleteFieldsForIkezoeSan",
+      "title" : "Delete fields for ikezoe san",
+      "time" : {
+        "start" : 1493690405465,
+        "stop" : 1493690480605,
+        "duration" : 75140
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "37d2c0cf458ff257",
+      "name" : "editEventForIkezoeSan",
+      "title" : "Edit event for ikezoe san",
+      "time" : {
+        "start" : 1493690480607,
+        "stop" : 1493690590652,
+        "duration" : 110045
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "2aa649f4dba73b20",
+      "name" : "inputFields",
+      "title" : "Input fields",
+      "time" : {
+        "start" : 1493690590653,
+        "stop" : 1493690621247,
+        "duration" : 30594
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "b04c3b03d10ae47c",
+      "name" : "inputNewFieldsForIkezoeSan",
+      "title" : "Input new fields for ikezoe san",
+      "time" : {
+        "start" : 1493690621248,
+        "stop" : 1493690697095,
+        "duration" : 75847
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "6b7644d3edf0ab38",
+      "name" : "modifyFieldsForIkezoeSan",
+      "title" : "Modify fields for ikezoe san",
+      "time" : {
+        "start" : 1493690697097,
+        "stop" : 1493690773777,
+        "duration" : 76680
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "e767cd8e4215610f",
+      "name" : "pickDate",
+      "title" : "Pick date",
+      "time" : {
+        "start" : 1493690773780,
+        "stop" : 1493690791430,
+        "duration" : 17650
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "b9432a68e89ca46e",
+      "name" : "selectAttachmentsFromHueDrive",
+      "title" : "Select attachments from hue drive",
+      "time" : {
+        "start" : 1493690791431,
+        "stop" : 1493690821525,
+        "duration" : 30094
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "aec3c68c917b8998",
+      "name" : "selectParticipants",
+      "title" : "Select participants",
+      "time" : {
+        "start" : 1493690821526,
+        "stop" : 1493690831697,
+        "duration" : 10171
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "c3be675044335ca6",
+      "name" : "setAllowedUser",
+      "title" : "Set allowed user",
+      "time" : {
+        "start" : 1493690831698,
+        "stop" : 1493690846232,
+        "duration" : 14534
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "7f4d03e4ec409ea0",
+      "name" : "setReminder",
+      "title" : "Set reminder",
+      "time" : {
+        "start" : 1493690846233,
+        "stop" : 1493690857660,
+        "duration" : 11427
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "c945da7f2e30cf5e",
+      "name" : "clickTodayButtonInStartCalendar",
+      "title" : "Click today button in start calendar",
+      "time" : {
+        "start" : 1493690857661,
+        "stop" : 1493690873210,
+        "duration" : 15549
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "4ef6fc35d4fb7148",
+      "name" : "createBooking",
+      "title" : "Create booking",
+      "time" : {
+        "start" : 1493690873213,
+        "stop" : 1493690920561,
+        "duration" : 47348
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "9ed4f8880d7e2680",
+      "name" : "getBookingPage",
+      "title" : "Get booking page",
+      "time" : {
+        "start" : 1493690920562,
+        "stop" : 1493690929868,
+        "duration" : 9306
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "e35795f2313f40fa",
+      "name" : "selectAttendees",
+      "title" : "Select attendees",
+      "time" : {
+        "start" : 1493690929869,
+        "stop" : 1493690959391,
+        "duration" : 29522
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "af752c29090eea5b",
+      "name" : "selectCandidates",
+      "title" : "Select candidates",
+      "time" : {
+        "start" : 1493690959392,
+        "stop" : 1493690993760,
+        "duration" : 34368
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "727ffad7ba182287",
+      "name" : "deleteEvent",
+      "title" : "Delete event",
+      "time" : {
+        "start" : 1493690993764,
+        "stop" : 1493690993766,
+        "duration" : 2
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "dbac815bb381ae4e",
+      "name" : "createEvent",
+      "title" : "Create event",
+      "time" : {
+        "start" : 1493690993766,
+        "stop" : 1493690993767,
+        "duration" : 1
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "eb2620c28b5e6308",
+      "name" : "deleteFields",
+      "title" : "Delete fields",
+      "time" : {
+        "start" : 1493690993767,
+        "stop" : 1493690993767,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "133f5bc38844360f",
+      "name" : "editEvent",
+      "title" : "Edit event",
+      "time" : {
+        "start" : 1493690993767,
+        "stop" : 1493690993768,
+        "duration" : 1
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "847ef0b7e4753462",
+      "name" : "inputNewFields",
+      "title" : "Input new fields",
+      "time" : {
+        "start" : 1493690993768,
+        "stop" : 1493690993768,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "c51a830012a1ff90",
+      "name" : "modifyFields",
+      "title" : "Modify fields",
+      "time" : {
+        "start" : 1493690993768,
+        "stop" : 1493690993769,
+        "duration" : 1
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    }, {
+      "uid" : "ec9985f275a9bb1f",
+      "name" : "selectFacilities",
+      "title" : "Select facilities",
+      "time" : {
+        "start" : 1493690993769,
+        "stop" : 1493690993769,
+        "duration" : 0
+      },
+      "severity" : "NORMAL",
+      "status" : "CANCELED"
+    } ]
+  } ]
+}

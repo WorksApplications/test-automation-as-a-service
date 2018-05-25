@@ -1,0 +1,49 @@
+{
+  "time" : {
+    "start" : 1493712097001,
+    "stop" : 1493712130072,
+    "duration" : 33071
+  },
+  "testSuites" : [ {
+    "uid" : "5bef52cfc16274db",
+    "name" : "HueCollaboration : HueCommon",
+    "title" : "HueCollaboration : HueCommon",
+    "time" : {
+      "start" : 1493712097001,
+      "stop" : 1493712130072,
+      "duration" : 33071
+    },
+    "statistic" : {
+      "total" : 2,
+      "passed" : 0,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 2
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "98c7962b4b3b6d55",
+      "name" : "testFailedLogin",
+      "title" : "Test failed login",
+      "time" : {
+        "start" : 1493712097001,
+        "stop" : 1493712108263,
+        "duration" : 11262
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    }, {
+      "uid" : "26b7f590bea4d594",
+      "name" : "testSuccessfulLogin",
+      "title" : "Test successful login",
+      "time" : {
+        "start" : 1493712108268,
+        "stop" : 1493712130072,
+        "duration" : 21804
+      },
+      "severity" : "NORMAL",
+      "status" : "BROKEN"
+    } ]
+  } ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "taas-api-server",
+  "version": "0.0.1",
+  "description": "The TaaS Web API Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=\"test\" nyc --reporter=html --reporter=text --report-dir=../reports/backend-coverage mocha test/*/ --delay --reporter mochawesome --reporter-options reportDir=../reports/backend-test,reportFilename=index; rm -rf .nyc_output",
+    "api-test": "NODE_ENV=\"test\" nyc --reporter=html --reporter=text --report-dir=../reports/api-test/backend-coverage mocha test/api-test/ --delay --reporter mochawesome --reporter-options reportDir=../reports/api-test/backend-test,reportFilename=index; rm -rf .nyc_output",
+    "unit-test": "NODE_ENV=\"test\" nyc --reporter=html --reporter=text --report-dir=../reports/unit-test/backend-coverage mocha test/unit-test/ --reporter mochawesome --reporter-options reportDir=../reports/unit-test/backend-test,reportFilename=index; rm -rf .nyc_output",
+    "testprod": "nyc --reporter=html --reporter=text --report-dir=../reports/backend-coverage mocha --delay --reporter mochawesome --reporter-options reportDir=../reports/backend-test,reportFilename=index; rm -rf .nyc_output",
+    "start": "node index",
+    "eslint": "eslint --ignore-pattern 'test/' --ext .js ./ -f node_modules/eslint-html-reporter/reporter.js -o ../reports/backend-eslint/index.html",
+    "sonar": "sonar-scanner -Dsonar.host.url=http://shanghaiqe.internal.worksap.com:9000 -Dsonar.login=763437e412e265d880218e7d83b461ef64c4fcc8",
+    "daemon": "pm2 start index.js --watch --name=\"taas-api\"",
+    "forever": "supervisor index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@scm.hue.workslan:tools/hue-taas.git"
+  },
+  "keywords": [
+    "taas",
+    "test"
+  ],
+  "author": "Shanghai QE",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^3.14.2",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cron-parser": "^2.4.3",
+    "diff-json": "^0.1.11",
+    "dockerode": "^2.5.3",
+    "express": "^4.16.2",
+    "fs-extra": "^4.0.3",
+    "glob": "^7.1.2",
+    "hasha": "^3.0.0",
+    "into-stream": "^3.1.0",
+    "js-yaml": "^3.10.0",
+    "jsonwebtoken": "^8.1.0",
+    "lodash": "^4.17.4",
+    "moment-timezone": "^0.5.14",
+    "mongo-key-escape": "0.0.1",
+    "mongoose": "^4.13.6",
+    "mongoose-count-and-find": "^1.0.0",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "node-schedule-tz": "^1.2.1-4",
+    "pm2": "^2.8.0",
+    "queue": "^4.4.2",
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2",
+    "socket.io": "^2.1.0",
+    "supervisor": "^0.12.0",
+    "tree-kill": "^1.2.0",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.12.1",
+    "eslint-html-reporter": "^0.5.2",
+    "mocha": "^3.5.3",
+    "mochawesome": "^2.3.1",
+    "nyc": "^11.4.0",
+    "sinon": "^4.1.5",
+    "sinon-mongoose": "^2.0.2",
+    "sonarqube-scanner": "^2.0.2",
+    "supertest": "^3.0.0"
+  }
+}

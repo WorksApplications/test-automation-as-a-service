@@ -1,0 +1,24 @@
+version: '3.0'
+
+services:
+  intg-chrome-node:
+    image: intg-chrome-node
+    build: ./intg-chrome-node
+  taas-node-firefox-esr:
+    image: taas-node-firefox-esr
+    build: ./taas-node-firefox-esr
+  taas-node-firefox-debug:
+    image: taas-node-firefox-debug
+    build: ./taas-node-firefox-debug
+    depends_on:
+     - taas-node-firefox-esr
+  taas-standalone-firefox-debug:
+    image: taas-standalone-firefox-debug
+    build: ./taas-standalone-firefox-debug
+    depends_on:
+     - taas-node-firefox-debug
+  intg-firefox-node:
+    image: intg-firefox-node
+    build: ./intg-firefox-node
+    depends_on:
+     - taas-standalone-firefox-debug

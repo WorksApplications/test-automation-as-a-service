@@ -1,0 +1,8 @@
+back-end/node_modules/
+hue-selenium/
+.vscode/
+back-end/config.yml
+media-server/config.yml
+npm-debug.log
+.DS_Store
+.scannerwork/

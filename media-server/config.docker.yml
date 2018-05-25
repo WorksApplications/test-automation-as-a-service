@@ -1,0 +1,38 @@
+server:
+  host: 0.0.0.0
+  port: 5009
+
+core:
+  videoDir: '/videos/'
+  workspace: '/tmp/taas-media-server/'
+
+#
+# Winston Logging System
+# Reference: https://github.com/winstonjs/winston/blob/master/docs/transports.md
+#
+logger:
+  fileLogger:
+    level: 'debug'
+    filename: '../var/log/media-server/logs.log'
+    handleExceptions: true
+    json: false
+    maxsize: 5242880
+    colorize: false
+    maxFiles: 200
+    tailable: true
+  accessLogger:
+    level: 'debug'
+    filename: '../var/log/media-server/access.log'
+    handleExceptions: true
+    json: false
+    maxsize: 5242880
+    colorize: false
+    maxFiles: 200
+    tailable: true
+  consoleLogger:
+    level: 'debug'
+    timestamp: true
+    handleExceptions: true
+    json: false
+    colorize: true
+  morganFormat: ':method :url :status HTTP/:http-version :response-time ms ":referrer" ":user-agent"'

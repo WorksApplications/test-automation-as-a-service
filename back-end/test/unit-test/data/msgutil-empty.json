@@ -1,0 +1,27 @@
+{
+  "time" : {
+    "start" : 1493712097001,
+    "stop" : 1493712130072,
+    "duration" : 33071
+  },
+  "testSuites" : [ {
+    "uid" : "5bef52cfc16274db",
+    "name" : "HueCollaboration : HueCommon",
+    "title" : "HueCollaboration : HueCommon",
+    "time" : {
+      "start" : 1493712097001,
+      "stop" : 1493712130072,
+      "duration" : 33071
+    },
+    "statistic" : {
+      "total" : 0,
+      "passed" : 0,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : []
+  } ]
+}
