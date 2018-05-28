@@ -1,7 +1,5 @@
 FROM selenium/standalone-chrome-debug:3.8.1-aluminum
 
-ARG RESOURCES=http://shanghaiqe.internal.worksap.com
-
 USER root
 COPY entry_point.sh /opt/bin/entry_point.sh
 RUN chmod 755 /opt/bin/entry_point.sh
@@ -13,7 +11,8 @@ COPY wallpaper_chrome.jpg /usr/share/images/fluxbox/ubuntu-light.png
 # Java env
 #==================
 ENV JAVA_HOME /opt/java
-ARG ORACLE_JAVA_URL=$RESOURCES/jdk1.8.0_112.tar.gz
+# !!Specify jdk resource by yourself
+ARG ORACLE_JAVA_URL='resource of jdk'
 
 ENV PATH ${JAVA_HOME}/bin:$PATH
 RUN mkdir -p $JAVA_HOME \
@@ -25,8 +24,9 @@ RUN mkdir -p $JAVA_HOME \
 ARG MAVEN_VERSION=3.5.0
 ARG MAVEN_HOME=/opt/maven
 
+# !!Specify maven resource by yourself
 RUN mkdir -p $MAVEN_HOME $MAVEN_REGISTRY \
- && wget $RESOURCES/apache-maven-$MAVEN_VERSION-bin.tar.gz -qO - \
+ && wget 'resource of maven' -qO - \
     | tar -xzC $MAVEN_HOME --strip-components=1 \
  && ln -s $MAVEN_HOME/bin/mvn /usr/local/bin/mvn \
  && whereis mvn

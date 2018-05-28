@@ -11,9 +11,10 @@
     "test": "npm run unit && npm run e2e",
     "eslint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "eslint-fix": "eslint --fix --ext .js,.vue src test/unit test/e2e/specs",
-    "sonar": "sonar-scanner -Dsonar.host.url=http://shanghaiqe.internal.worksap.com:9000 -Dsonar.login=763437e412e265d880218e7d83b461ef64c4fcc8 -Dsonar.exclusions=dist/**/*,node_modules/**/*",
     "build": "node build/build.js"
   },
+  "author": "Shanghai QE",
+  "license": "Apache-2.0",
   "dependencies": {
     "@novnc/novnc": "1.0.0-testing.2",
     "axios": "^0.18.0",

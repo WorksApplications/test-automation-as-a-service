@@ -9,7 +9,7 @@
     "forever": "supervisor index"
   },
   "author": "Shanghai QE",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "express": "^4.16.2",
     "fs-extra": "^5.0.0",
