@@ -10,20 +10,15 @@
     "testprod": "nyc --reporter=html --reporter=text --report-dir=../reports/backend-coverage mocha --delay --reporter mochawesome --reporter-options reportDir=../reports/backend-test,reportFilename=index; rm -rf .nyc_output",
     "start": "node index",
     "eslint": "eslint --ignore-pattern 'test/' --ext .js ./ -f node_modules/eslint-html-reporter/reporter.js -o ../reports/backend-eslint/index.html",
-    "sonar": "sonar-scanner -Dsonar.host.url=http://shanghaiqe.internal.worksap.com:9000 -Dsonar.login=763437e412e265d880218e7d83b461ef64c4fcc8",
     "daemon": "pm2 start index.js --watch --name=\"taas-api\"",
     "forever": "supervisor index"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@scm.hue.workslan:tools/hue-taas.git"
   },
   "keywords": [
     "taas",
     "test"
   ],
   "author": "Shanghai QE",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "dependencies": {
     "@slack/client": "^3.14.2",
     "body-parser": "^1.18.2",

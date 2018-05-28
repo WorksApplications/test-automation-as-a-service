@@ -108,12 +108,6 @@
       <url>http://my.repository.com/repo/path</url>
     </mirror>
      -->
-    <mirror>
-      <id>hue-central</id>
-      <name>COMPANY HUE Internal Central Repository</name>
-      <url>http://product-ci.workslan:8081/nexus/content/repositories/central/</url>
-      <mirrorOf>central</mirrorOf>
-    </mirror>
   </mirrors>
   
   <!-- profiles

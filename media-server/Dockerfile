@@ -1,8 +1,5 @@
 FROM python:2.7.13
 
-ARG RESOURCES=http://shanghaiqe.internal.worksap.com
-
-
 #==================
 # install vnc2flv
 #+=================
@@ -16,8 +13,9 @@ ARG NODE_VERSION=8.10.0
 ARG NODE_HOME=/opt/node
 
 ENV PATH=$NODE_HOME/bin:$PATH
+# !!Specify node resource by yourself
 RUN mkdir -p ${NODE_HOME} \
- && curl -SL $RESOURCES/node-v$NODE_VERSION-linux-x64.tar.xz \
+ && curl -SL 'resource of node' \
     | tar -xJC ${NODE_HOME} --strip-components=1 \
  && node -v
 

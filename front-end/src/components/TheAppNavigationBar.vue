@@ -136,13 +136,10 @@ export default {
   methods: {
     // External redirects
     goGitlabTestcases: () => {
-      window.open('https://scm.hue.workslan/tools/hue-auto-tests', '_blank')
     },
     goWiki: () => {
-      window.open('http://huewiki/mediawiki/index.php/TaaS_Readme', '_blank')
     },
     goFeedback: () => {
-      window.open('https://workshuebt.slack.com/messages/C62M7BYG5', '_blank')
     },
     goGeniusCenterRegister: () => {
       window.open('http://genius.internal.worksap.com/users/new', '_blank')
