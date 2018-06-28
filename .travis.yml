@@ -1,0 +1,26 @@
+language: node_js
+sudo: false
+install:
+  - cd $TRAVIS_BUILD_DIR/back-end
+  - npm install
+  - cd $TRAVIS_BUILD_DIR/front-end
+  - npm install
+  - cd $TRAVIS_BUILD_DIR/media-server
+  - npm install
+script:
+  - cd $TRAVIS_BUILD_DIR/back-end
+  - npm run eslint
+  # TODO: generate config.yml from template
+  # - npm test
+  - cd $TRAVIS_BUILD_DIR/front-end
+  - npm run eslint
+  - npm run build
+  # TODO: we need browser to run test
+  # - npm test
+  # TODO: no test we have in this subproject
+  # - npm install media-server
+cache:
+  directories:
+    - "back-end/node_modules"
+    - "front-end/node_modules"
+    - "media-end/node_modules"
