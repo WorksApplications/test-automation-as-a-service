@@ -29,7 +29,7 @@
     "socket.io-client": "^2.1.0",
     "sonarqube-scanner": "^2.0.2",
     "vue": "^2.5.2",
-    "vue-awesome": "^2.3.5",
+    "vue-awesome": "^3.0.3",
     "vue-clipboard2": "0.0.9",
     "vue-echarts": "^3.0.7",
     "vue-lazy-render": "^1.0.20",
