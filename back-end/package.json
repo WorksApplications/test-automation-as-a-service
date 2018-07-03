@@ -59,7 +59,7 @@
     "mochawesome": "^2.3.1",
     "nyc": "^11.4.0",
     "sinon": "^4.1.5",
-    "sinon-mongoose": "^2.0.2",
+    "sinon-mongoose": "^2.1.1",
     "sonarqube-scanner": "^2.0.2",
     "supertest": "^3.0.0"
   }
