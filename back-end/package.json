@@ -23,7 +23,7 @@
     "@slack/client": "^3.14.2",
     "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.3",
-    "cron-parser": "^2.4.3",
+    "cron-parser": "^2.5.0",
     "diff-json": "^0.1.11",
     "dockerode": "^2.5.3",
     "express": "^4.16.3",
