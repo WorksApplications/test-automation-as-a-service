@@ -40,7 +40,7 @@
     "mongoose": "^4.13.6",
     "mongoose-count-and-find": "^1.0.0",
     "morgan": "^1.9.0",
-    "multer": "^1.3.0",
+    "multer": "^1.3.1",
     "node-schedule-tz": "^1.2.1-4",
     "pm2": "^2.8.0",
     "queue": "^4.4.2",
