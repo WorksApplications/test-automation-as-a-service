@@ -58,7 +58,7 @@
     "chromedriver": "^2.27.2",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.1",
-    "cross-spawn": "^5.0.1",
+    "cross-spawn": "^6.0.5",
     "css-loader": "^0.28.11",
     "element-theme": "^2.0.1",
     "element-theme-chalk": "^2.2.1",
