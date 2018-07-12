@@ -26,7 +26,7 @@
     "cron-parser": "^2.4.3",
     "diff-json": "^0.1.11",
     "dockerode": "^2.5.3",
-    "express": "^4.16.2",
+    "express": "^4.16.3",
     "fs-extra": "^4.0.3",
     "glob": "^7.1.2",
     "hasha": "^3.0.0",
