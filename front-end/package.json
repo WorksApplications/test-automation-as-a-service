@@ -18,7 +18,7 @@
   "dependencies": {
     "@novnc/novnc": "1.0.0-testing.2",
     "axios": "^0.18.0",
-    "element-ui": "^2.2.1",
+    "element-ui": "^2.4.4",
     "font-awesome": "^4.7.0",
     "hoek": "^5.0.3",
     "lodash": "^4.17.5",
