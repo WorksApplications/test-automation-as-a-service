@@ -62,7 +62,7 @@
     "css-loader": "^1.0.0",
     "element-theme": "^2.0.1",
     "element-theme-chalk": "^2.2.1",
-    "eslint": "^4.15.0",
+    "eslint": "^5.1.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
