@@ -27,7 +27,7 @@
     "prettify-xml": "^1.2.0",
     "prismjs": "^1.11.0",
     "socket.io-client": "^2.1.0",
-    "sonarqube-scanner": "^2.0.2",
+    "sonarqube-scanner": "^2.1.0",
     "vue": "^2.5.16",
     "vue-awesome": "^3.0.3",
     "vue-clipboard2": "0.0.9",
