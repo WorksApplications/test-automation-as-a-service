@@ -72,22 +72,22 @@ const service = {
   },
   getUserFromToken: (req, res, next) => {
     try {
-      let decoded = jwt.verify(req.cookies['token'], secret, { algorithms: ['HS256'] });
       if (req.cookies['token']) {
-        console.log(decoded);
+        let decoded = jwt.verify(req.cookies['token'], secret, { algorithms: ['HS256'] });
         res.json({
           success: true,
           user: decoded
         });
       } else {
-        res.json({
-          success: true,
+        res.status(401).json({
+          success: false,
           user: null
         });
       }
     } catch (err) {
-      res.json({
-        success: true,
+      console.log(err);
+      res.status(500).json({
+        success: false,
         user: null
       });
     }
